@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<title>User Activity Monitoring Tool</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+		<h1 class="mb-4">User Activity Monitoring Tool</h1>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				<div class="alert alert-info">{{ messages[0] }}</div>
+			{% endif %}
+		{% endwith %}
+		<div class="list-group">
+				<a href="{{ url_for('monitor') }}" class="list-group-item list-group-item-action">1. Real-time monitoring (users + processes)</a>
+				<a href="{{ url_for('log_snapshot') }}" class="list-group-item list-group-item-action">2. Log current activity snapshot</a>
+				<a href="{{ url_for('daily_report') }}" class="list-group-item list-group-item-action">3. Generate daily usage report</a>
+				<a href="{{ url_for('alerts') }}" class="list-group-item list-group-item-action">4. Check high resource usage (alerts)</a>
+				<a href="{{ url_for('session_history') }}" class="list-group-item list-group-item-action">5. Show recent user session history</a>
+		</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+===== Report for 2025-09-24 =====
+
+wtmp begins Fri Jul 11 00:13:09 2025
+
+Top 5 processes today:
+COMMAND         %CPU %MEM
+python          22.5  0.4
+node             3.9 13.1
+node             2.5 13.0
+python           0.6  0.4
